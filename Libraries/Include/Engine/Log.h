@@ -17,6 +17,12 @@ private:
 public:
 	inline static sptr<spdlog::logger>& GetLogger() { return LOG->mLogger; }
 public:
+	/*Log()
+	{
+		spdlog::set_pattern("%^[%T] %n: %v%$");
+		mLogger = spdlog::stdout_color_mt("Client ");
+		mLogger->set_level(spdlog::level::trace);
+	}*/
 	~Log()
 	{
 		mLogger.reset();

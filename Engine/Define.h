@@ -1,6 +1,6 @@
 #pragma once
 
-#pragma warning(disable : 4819 4996)
+#pragma warning(disable : 4244 4819 4838 4996)
 
 #ifdef _DEBUG
 #define _CRTDBG_MAP_ALLOC
@@ -11,7 +11,6 @@
 #define New DBG_NEW
 #endif
 #endif
-
 
 #define DECLARE_SINGLETON(classname)		\
 private:									\
@@ -31,7 +30,7 @@ public:										\
 #define DEVICE	GET_SINGLETON(DirectX11)->GetDevice()
 #define CONTEXT GET_SINGLETON(DirectX11)->GetContext()
 #define GUI		GET_SINGLETON(ImGuiManager)
+#define INPUT	GET_SINGLETON(InputManager)
+#define TIME	GET_SINGLETON(TimeManager)
 
-
-
-//#define CHECK(p)	assert(SUCCEEDED(p))
+#define CHECK(p)	assert(SUCCEEDED(p))

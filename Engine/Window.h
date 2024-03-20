@@ -34,5 +34,7 @@ private:
 	WindowDesc mDesc;
 public:
 	static LRESULT CALLBACK WndProc(HWND handle, UINT message, WPARAM wParam, LPARAM lParam);
+private:
+	f32 timeAcc = 0.f;
 };
 

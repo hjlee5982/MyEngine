@@ -79,3 +79,5 @@ using namespace Microsoft::WRL;
 #include "DirectX11.h"
 
 #include "ImGuiManager.h"
+#include "InputManager.h"
+#include "TimeManager.h"

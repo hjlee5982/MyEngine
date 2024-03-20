@@ -6,17 +6,18 @@ extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg
 
 void Window::Update()
 {
+	TIME->InternalUpdate();
+	INPUT->Update();
+
+	//u32 fps = GET_SINGLETON(TimeManager)->GetFPS();
+
 	DX->RenderBegin();
-
+	
 	GUI->Update();
-	ImGui::Begin("Test");
-
 
 	mDesc.app->Update();
 	mDesc.app->Render();
 
-
-	ImGui::End();
 	GUI->Render();
 	
 	DX->RenderEnd();
@@ -24,12 +25,12 @@ void Window::Update()
 
 void Window::ShowFPS()
 {
-	/*u32 fps = GET_SINGLE(TimeManager)->GetFPS();
+	u32 fps = GET_SINGLETON(TimeManager)->GetFPS();
 
 	WCHAR text[100] = L"";
 	::wsprintf(text, L"FPS : %d", fps);
 
-	::SetWindowText(mDesc.hWnd, text);*/
+	::SetWindowText(mDesc.hWnd, text);
 }
 
 WPARAM Window::Run(WindowDesc& desc)
@@ -48,11 +49,15 @@ WPARAM Window::Run(WindowDesc& desc)
 		LOG->Init();
 		DX->Init(mDesc);
 		GUI->Init();
+		INPUT->Init(mDesc.hWnd, mDesc.hInstance);
+		TIME->Init();
 	}
 
 	mDesc.app->Init();
 
 	MSG msg = { 0 };
+
+	f32 timeAcc = 0.0f;
 
 	while (msg.message != WM_QUIT)
 	{
@@ -66,7 +71,9 @@ WPARAM Window::Run(WindowDesc& desc)
 	}
 
 	// RELEASE
-	spdlog::shutdown();
+	{
+		spdlog::shutdown();
+	}
 
 	return msg.wParam;
 }

@@ -7,6 +7,7 @@ void MyProject::Init()
 
 void MyProject::Update()
 {
+
 }
 
 void MyProject::Render()
