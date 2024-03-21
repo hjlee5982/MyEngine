@@ -26,6 +26,21 @@
     <Filter Include="02. Managers">
       <UniqueIdentifier>{4c782a5d-0edd-4665-84ef-5a1c2b6b36ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="04. Components">
+      <UniqueIdentifier>{47451fdd-27b3-4c40-bc6c-914dfc5fa511}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. GameObject">
+      <UniqueIdentifier>{ea850038-1ce5-428d-8163-213de3c85146}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Graphics\Device">
+      <UniqueIdentifier>{a438e0d1-9d6c-482c-9403-2e9e284ce61a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Graphics\Buffer">
+      <UniqueIdentifier>{9acea84f-82cb-4dce-87ca-ddb367e62b8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Graphics\Resources">
+      <UniqueIdentifier>{d0628d47-fb0d-4fcb-9060-531069ad5c42}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -79,12 +94,6 @@
     <ClInclude Include="IExecute.h">
       <Filter>00. Window</Filter>
     </ClInclude>
-    <ClInclude Include="DirectX11.h">
-      <Filter>01. Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="Viewport.h">
-      <Filter>01. Graphics</Filter>
-    </ClInclude>
     <ClInclude Include="ImGuiManager.h">
       <Filter>02. Managers</Filter>
     </ClInclude>
@@ -93,6 +102,42 @@
     </ClInclude>
     <ClInclude Include="TimeManager.h">
       <Filter>02. Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="IGameObject.h">
+      <Filter>03. GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="IComponent.h">
+      <Filter>04. Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>04. Components</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshRenderer.h">
+      <Filter>04. Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewport.h">
+      <Filter>01. Graphics\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX11.h">
+      <Filter>01. Graphics\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexData.h">
+      <Filter>01. Graphics\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>01. Graphics\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexBuffer.h">
+      <Filter>01. Graphics\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantBuffer.h">
+      <Filter>01. Graphics\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry.h">
+      <Filter>01. Graphics\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometryHelper.h">
+      <Filter>01. Graphics\Buffer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -135,12 +180,6 @@
     <ClCompile Include="IExecute.cpp">
       <Filter>00. Window</Filter>
     </ClCompile>
-    <ClCompile Include="DirectX11.cpp">
-      <Filter>01. Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="Viewport.cpp">
-      <Filter>01. Graphics</Filter>
-    </ClCompile>
     <ClCompile Include="ImGuiManager.cpp">
       <Filter>02. Managers</Filter>
     </ClCompile>
@@ -149,6 +188,42 @@
     </ClCompile>
     <ClCompile Include="TimeManager.cpp">
       <Filter>02. Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="IGameObject.cpp">
+      <Filter>03. GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="IComponent.cpp">
+      <Filter>04. Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>04. Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshRenderer.cpp">
+      <Filter>04. Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewport.cpp">
+      <Filter>01. Graphics\Device</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX11.cpp">
+      <Filter>01. Graphics\Device</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexData.cpp">
+      <Filter>01. Graphics\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBuffer.cpp">
+      <Filter>01. Graphics\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexBuffer.cpp">
+      <Filter>01. Graphics\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstantBuffer.cpp">
+      <Filter>01. Graphics\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry.cpp">
+      <Filter>01. Graphics\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometryHelper.cpp">
+      <Filter>01. Graphics\Buffer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

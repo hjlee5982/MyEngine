@@ -12,6 +12,9 @@
     <Filter Include="01. Application">
       <UniqueIdentifier>{c49c7855-8718-45ea-ad7c-49cacbf5a8bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02. GameObject">
+      <UniqueIdentifier>{cc26c751-23fc-4d0c-bc73-86720190c441}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -23,6 +26,12 @@
     <ClCompile Include="MyProject.cpp">
       <Filter>01. Application</Filter>
     </ClCompile>
+    <ClCompile Include="TestObj.cpp">
+      <Filter>02. GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>02. GameObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -30,6 +39,12 @@
     </ClInclude>
     <ClInclude Include="MyProject.h">
       <Filter>01. Application</Filter>
+    </ClInclude>
+    <ClInclude Include="TestObj.h">
+      <Filter>02. GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>02. GameObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
