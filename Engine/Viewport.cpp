@@ -34,7 +34,7 @@ vec3 Viewport::Project(const vec3& pos, const matx& W, const matx& V, const matx
 {
     matx wvp = W * V * P;
 
-    vec3 p = vec3::Transform(pos, wvp);
+    vec3 p = vec3::TransformCoord(pos, wvp);
 
     p.x = (p.x + 1.0f) * (mViewport.Width / 2) + mViewport.TopLeftX;
     p.y = (-p.y + 1.0f) * (mViewport.Height / 2) + mViewport.TopLeftY;
@@ -54,7 +54,7 @@ vec3 Viewport::UnProject(const vec3& pos, const matx& W, const matx& V, const ma
     matx wvp    = W * V * P;
     matx wvpInv = wvp.Invert();
 
-    p = vec3::Transform(p, wvpInv);
+    p = vec3::TransformCoord(p, wvpInv);
 
     return p;
 }

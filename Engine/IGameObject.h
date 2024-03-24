@@ -3,6 +3,7 @@
 #include "IComponent.h"
 
 class Transform;
+class Camera;
 class MeshRenderer;
 
 class IGameObject abstract : public enable_shared_from_this<IGameObject>
@@ -22,6 +23,7 @@ private:
 	sptr<IComponent> GetComponent(ComponentType type);
 public:
 	sptr<Transform>    GetTransform();
+	sptr<Camera>       GetCamera();
 	sptr<MeshRenderer> GetMeshRenderer();
 private:
 	Dictionary<ComponentType, sptr<IComponent>> mComponents;

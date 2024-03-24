@@ -32,5 +32,6 @@ public:										\
 #define GUI		GET_SINGLETON(ImGuiManager)
 #define INPUT	GET_SINGLETON(InputManager)
 #define TIME	GET_SINGLETON(TimeManager)
+#define SCENE   GET_SINGLETON(SceneManager)
 
 #define CHECK(p)	assert(SUCCEEDED(p))

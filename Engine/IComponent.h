@@ -1,10 +1,12 @@
 #pragma once
 
 class IGameObject;
+class Transform;
 
 enum class ComponentType : u8
 {
 	TRANSFORM,
+	CAMERA,
 	MESHRENDERER,
 
 	END,
@@ -26,10 +28,8 @@ public:
 	{
 		return mType;
 	}
-	sptr<IGameObject> GetGameObject()
-	{
-		return mGameObject.lock();
-	}
+	sptr<IGameObject> GetGameObject();
+	sptr<Transform>   GetTransform();
 private:
 	friend class IGameObject;
 	void SetGameObject(sptr<IGameObject> gameObject)
@@ -37,7 +37,7 @@ private:
 		mGameObject = gameObject;
 	}
 protected:
-	ComponentType    mType;
+	ComponentType     mType;
 	wptr<IGameObject> mGameObject;
 };
 

@@ -25,3 +25,13 @@ void IComponent::LateUpdate()
 void IComponent::FixedUpdate()
 {
 }
+
+sptr<IGameObject> IComponent::GetGameObject()
+{
+	return mGameObject.lock();
+}
+
+sptr<Transform> IComponent::GetTransform()
+{
+	return mGameObject.lock()->GetTransform();
+}

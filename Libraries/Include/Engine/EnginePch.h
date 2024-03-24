@@ -79,6 +79,10 @@ using namespace Microsoft::WRL;
 #include "Window.h"
 #include "DirectX11.h"
 
+#include "IGameObject.h"
+#include "Transform.h"
+
 #include "ImGuiManager.h"
 #include "InputManager.h"
 #include "TimeManager.h"
+#include "SceneManager.h"

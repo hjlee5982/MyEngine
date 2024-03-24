@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "IGameObject.h"
 #include "Transform.h"
+#include "Camera.h"
 #include "MeshRenderer.h"
 
 IGameObject::IGameObject()
@@ -56,6 +57,13 @@ sptr<Transform> IGameObject::GetTransform()
 	auto component = GetComponent(ComponentType::TRANSFORM);
 
 	return static_pointer_cast<Transform>(component);
+}
+
+sptr<Camera> IGameObject::GetCamera()
+{
+	auto component = GetComponent(ComponentType::CAMERA);
+
+	return static_pointer_cast<Camera>(component);
 }
 
 sptr<MeshRenderer> IGameObject::GetMeshRenderer()

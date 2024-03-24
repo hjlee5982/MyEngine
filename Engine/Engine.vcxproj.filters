@@ -41,6 +41,9 @@
     <Filter Include="01. Graphics\Resources">
       <UniqueIdentifier>{d0628d47-fb0d-4fcb-9060-531069ad5c42}</UniqueIdentifier>
     </Filter>
+    <Filter Include="05. Scene">
+      <UniqueIdentifier>{090dbde1-e9f0-417d-a00c-06ff35afdd84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -139,6 +142,15 @@
     <ClInclude Include="GeometryHelper.h">
       <Filter>01. Graphics\Buffer</Filter>
     </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>04. Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>05. Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>05. Scene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -224,6 +236,15 @@
     </ClCompile>
     <ClCompile Include="GeometryHelper.cpp">
       <Filter>01. Graphics\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>04. Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>05. Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>05. Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

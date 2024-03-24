@@ -1,17 +1,18 @@
 #include "pch.h"
 #include "MyProject.h"
-#include "Transform.h"
-#include "MeshRenderer.h"
-#include "TestObj.h"
+#include "StartScene.h"
 
 void MyProject::Init()
 {
+	SCENE->ChangeScene(makeSptr<StartScene>());
 }
 
 void MyProject::Update()
 {
+	SCENE->Update();
 }
 
 void MyProject::Render()
 {
+	SCENE->Render();
 }

@@ -12,8 +12,11 @@
     <Filter Include="01. Application">
       <UniqueIdentifier>{c49c7855-8718-45ea-ad7c-49cacbf5a8bd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02. GameObject">
+    <Filter Include="03. GameObject">
       <UniqueIdentifier>{cc26c751-23fc-4d0c-bc73-86720190c441}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. Scene">
+      <UniqueIdentifier>{d79fc598-5a2d-4e41-972e-4a29de250675}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -26,11 +29,29 @@
     <ClCompile Include="MyProject.cpp">
       <Filter>01. Application</Filter>
     </ClCompile>
-    <ClCompile Include="TestObj.cpp">
-      <Filter>02. GameObject</Filter>
-    </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>02. GameObject</Filter>
+      <Filter>03. GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="StartScene.cpp">
+      <Filter>02. Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadScene.cpp">
+      <Filter>02. Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="MainScene.cpp">
+      <Filter>02. Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Loader.cpp">
+      <Filter>02. Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Enermy.cpp">
+      <Filter>03. GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>03. GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>03. GameObject</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -40,11 +61,29 @@
     <ClInclude Include="MyProject.h">
       <Filter>01. Application</Filter>
     </ClInclude>
-    <ClInclude Include="TestObj.h">
-      <Filter>02. GameObject</Filter>
-    </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>02. GameObject</Filter>
+      <Filter>03. GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="StartScene.h">
+      <Filter>02. Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadScene.h">
+      <Filter>02. Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="MainScene.h">
+      <Filter>02. Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Loader.h">
+      <Filter>02. Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Enermy.h">
+      <Filter>03. GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>03. GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>03. GameObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

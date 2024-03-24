@@ -296,15 +296,15 @@ namespace DirectX
             static void Refract(const Vector3& ivec, const Vector3& nvec, float refractionIndex, Vector3& result) noexcept;
             static Vector3 Refract(const Vector3& ivec, const Vector3& nvec, float refractionIndex) noexcept;
 
-            static void Transform(const Vector3& v, const Quaternion& quat, Vector3& result) noexcept;
-            static Vector3 Transform(const Vector3& v, const Quaternion& quat) noexcept;
+            static void TransformCoord(const Vector3& v, const Quaternion& quat, Vector3& result) noexcept;
+            static Vector3 TransformCoord(const Vector3& v, const Quaternion& quat) noexcept;
 
-            static void Transform(const Vector3& v, const matx& m, Vector3& result) noexcept;
-            static Vector3 Transform(const Vector3& v, const matx& m) noexcept;
-            static void Transform(_In_reads_(count) const Vector3* varray, size_t count, const matx& m, _Out_writes_(count) Vector3* resultArray) noexcept;
+            static void TransformCoord(const Vector3& v, const matx& m, Vector3& result) noexcept;
+            static Vector3 TransformCoord(const Vector3& v, const matx& m) noexcept;
+            static void TransformCoord(_In_reads_(count) const Vector3* varray, size_t count, const matx& m, _Out_writes_(count) Vector3* resultArray) noexcept;
 
-            static void Transform(const Vector3& v, const matx& m, Vector4& result) noexcept;
-            static void Transform(_In_reads_(count) const Vector3* varray, size_t count, const matx& m, _Out_writes_(count) Vector4* resultArray) noexcept;
+            static void TransformCoord(const Vector3& v, const matx& m, Vector4& result) noexcept;
+            static void TransformCoord(_In_reads_(count) const Vector3* varray, size_t count, const matx& m, _Out_writes_(count) Vector4* resultArray) noexcept;
 
             static void TransformNormal(const Vector3& v, const matx& m, Vector3& result) noexcept;
             static Vector3 TransformNormal(const Vector3& v, const matx& m) noexcept;

@@ -1208,7 +1208,7 @@ inline Vector3 Vector3::Refract(const Vector3& ivec, const Vector3& nvec, float 
     return result;
 }
 
-inline void Vector3::Transform(const Vector3& v, const Quaternion& quat, Vector3& result) noexcept
+inline void Vector3::TransformCoord(const Vector3& v, const Quaternion& quat, Vector3& result) noexcept
 {
     using namespace DirectX;
     XMVECTOR v1 = XMLoadFloat3(&v);
@@ -1217,7 +1217,7 @@ inline void Vector3::Transform(const Vector3& v, const Quaternion& quat, Vector3
     XMStoreFloat3(&result, X);
 }
 
-inline Vector3 Vector3::Transform(const Vector3& v, const Quaternion& quat) noexcept
+inline Vector3 Vector3::TransformCoord(const Vector3& v, const Quaternion& quat) noexcept
 {
     using namespace DirectX;
     XMVECTOR v1 = XMLoadFloat3(&v);
@@ -1229,7 +1229,7 @@ inline Vector3 Vector3::Transform(const Vector3& v, const Quaternion& quat) noex
     return result;
 }
 
-inline void Vector3::Transform(const Vector3& v, const matx& m, Vector3& result) noexcept
+inline void Vector3::TransformCoord(const Vector3& v, const matx& m, Vector3& result) noexcept
 {
     using namespace DirectX;
     XMVECTOR v1 = XMLoadFloat3(&v);
@@ -1238,7 +1238,7 @@ inline void Vector3::Transform(const Vector3& v, const matx& m, Vector3& result)
     XMStoreFloat3(&result, X);
 }
 
-inline Vector3 Vector3::Transform(const Vector3& v, const matx& m) noexcept
+inline Vector3 Vector3::TransformCoord(const Vector3& v, const matx& m) noexcept
 {
     using namespace DirectX;
     XMVECTOR v1 = XMLoadFloat3(&v);
@@ -1251,14 +1251,14 @@ inline Vector3 Vector3::Transform(const Vector3& v, const matx& m) noexcept
 }
 
 _Use_decl_annotations_
-inline void Vector3::Transform(const Vector3* varray, size_t count, const matx& m, Vector3* resultArray) noexcept
+inline void Vector3::TransformCoord(const Vector3* varray, size_t count, const matx& m, Vector3* resultArray) noexcept
 {
     using namespace DirectX;
     XMMATRIX M = XMLoadFloat4x4(&m);
     XMVector3TransformCoordStream(resultArray, sizeof(XMFLOAT3), varray, sizeof(XMFLOAT3), count, M);
 }
 
-inline void Vector3::Transform(const Vector3& v, const matx& m, Vector4& result) noexcept
+inline void Vector3::TransformCoord(const Vector3& v, const matx& m, Vector4& result) noexcept
 {
     using namespace DirectX;
     XMVECTOR v1 = XMLoadFloat3(&v);
@@ -1268,7 +1268,7 @@ inline void Vector3::Transform(const Vector3& v, const matx& m, Vector4& result)
 }
 
 _Use_decl_annotations_
-inline void Vector3::Transform(const Vector3* varray, size_t count, const matx& m, Vector4* resultArray) noexcept
+inline void Vector3::TransformCoord(const Vector3* varray, size_t count, const matx& m, Vector4* resultArray) noexcept
 {
     using namespace DirectX;
     XMMATRIX M = XMLoadFloat4x4(&m);
